@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "email": "tomasferreyra@hotmail.com",
+    "message": "Hola amigo, como has estado?",
+    "date": "16/11/2022, 11:50:36"
+  },
+  {
+    "id": 2,
+    "email": "santiagolopez@hotmail.com",
+    "message": "Muy bien amigo, vos?",
+    "date": "16/11/2022, 11:50:56"
+  },
+  {
+    "id": 3,
+    "email": "tomasferreyra@hotmail.com",
+    "message": "Perfecto, gracias por preocuparte.",
+    "date": "16/11/2022, 11:51:22"
+  },
+  {
+    "id": 4,
+    "email": "santiagolopez@hotmail.com",
+    "message": "De nada!",
+    "date": "16/11/2022, 11:51:30"
+  }
+]
