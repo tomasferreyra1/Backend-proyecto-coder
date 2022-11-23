@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1668886799005,
+    "products": [
+      {
+        "id": 4,
+        "timestamp": 1668881354246,
+        "title": "Ferrari 488",
+        "price": 286553,
+        "description": "Description here",
+        "code": "frr-488",
+        "image": "https://cdn.carbuzz.com/gallery-images/2019-ferrari-488-gtb-carbuzz-341322.jpg",
+        "stock": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "timestamp": 1668887928143,
+    "products": []
+  },
+  {
+    "id": 4,
+    "timestamp": 1668887929385,
+    "products": []
+  }
+]
