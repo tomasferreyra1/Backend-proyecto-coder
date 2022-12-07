@@ -1,0 +1,203 @@
+//Crear db
+use ecommerce;
+
+//Crear collection
+db.createCollection('mensajes');
+db.createCollection('productos');
+
+//Insertar 10 productos
+db.productos.insertMany([
+    {
+        "timestamp": 1669867785305,
+        "title": "Amarok",
+        "price": 120,
+        "description": "Description here",
+        "code": "Car-1",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867791375,
+        "title": "Gol",
+        "price": 580,
+        "description": "Description here",
+        "code": "Car-2",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800974,
+        "title": "Mustang",
+        "price": 900,
+        "description": "Description here",
+        "code": "Car-3",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800973,
+        "title": "Etios",
+        "price": 1280,
+        "description": "Description here",
+        "code": "Car-4",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800972,
+        "title": "Corolla",
+        "price": 1700,
+        "description": "Description here",
+        "code": "Car-5",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800971,
+        "title": "G-class",
+        "price": 2300,
+        "description": "Description here",
+        "code": "Car-6",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800970,
+        "title": "Aventador",
+        "price": 2860,
+        "description": "Description here",
+        "code": "Car-7",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800969,
+        "title": "Veyron",
+        "price": 3350,
+        "description": "Description here",
+        "code": "Car-8",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800968,
+        "title": "Fox",
+        "price": 4320,
+        "description": "Description here",
+        "code": "Car-9",
+        "image": "url"
+    },
+    {
+        "timestamp": 1669867800967,
+        "title": "peugot 308",
+        "price": 4990,
+        "description": "Description here",
+        "code": "Car-10",
+        "image": "url"
+    },
+])
+
+//Insertar 10 mensajes
+db.mensajes.insertMany([
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+    {
+        "timestamp": 1669867800967,
+        "email": 'tomy@gmail.com',
+        "message": 'Inserte un mensaje aqui'
+    },
+])
+
+//Listar documentos de cada coleccion
+db.productos.find();
+db.mensajes.find();
+
+//Contar la cantidad de documentos en cada coleccion
+db.productos.countDocuments();
+db.mensajes.countDocuments();
+
+//Agregar un producto en la coleccion "productos"
+db.productos.insertOne({
+    "timestamp": 1669867800966,
+    "title": "Chevrolet cruze LTZ",
+    "price": 4995,
+    "description": "Description here",
+    "code": "Car-11",
+    "image": "url"
+});
+
+//Realizar una consulta por nombre de un producto especifico
+db.productos.find({title: "Mustang"});
+
+//Listar los productos con precio menor a 1000
+db.productos.find({price: {$lt: 1000}});
+
+//Listar los productos con precio entre los 1000 a 3000
+db.productos.find({ $and: [{price: {$gt:1000}},{price: {$lt:3000}}] });
+
+//Listar los productos con precio mayor a 3000
+db.productos.find({price: {$gt: 3000}});
+
+//Realizar una consulta que traiga solo el nombre del tercer productos mas barato
+db.productos.find().sort({price: 1}).skip(2).limit(1);
+
+//Hacer una actualizacion sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100
+db.productos.updateMany({}, {$inc: {stock: 100}});
+
+//Cambiar el stock a cero de los productos con precios mayores a 4000
+db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}});
+
+//Borrar los productos con un precio menor a 1000
+db.productos.deleteMany({price: {$lt: 1000}});
+
+//Crear un usuario 'pepe' clave: 'asd456' que solo pueda leer la base de datos ecommerce
+db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]});
+
+//VERIFICACION
+mongo -u pepe -p asd456
+
+//Intentando agregar un producto
+db.productos.insertOne({
+    "timestamp": 1669867800965,
+    "title": "(nuevo)",
+    "price": 3670,
+    "description": "Description here",
+    "code": "Car-12",
+    "image": "url"
+});
+
