@@ -1,20 +1,52 @@
 [
     {
         "id": 1,
+        "timestamp" : 1668881203390,
         "title": "Range Rover",
         "price": "30.240.557",
-        "thumbnail": "image-Range-Rover"
+        "thumbnail": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_39bef15e3f4244aeaf5bf16af40b9284.jpg",
+        "code" : "r-rov",
+        "stock": 10,
+        "description" : "description here"
     },
     {
         "id": 2,
+        "timestamp" : 1668881186120,
         "title": "Nissan March",
         "price": "3.712.332",
-        "thumbnail": "image-Nissan-March"
+        "thumbnail": "https://www.nissanautoferro.com/wp-content/uploads/2020/11/march-191022.jpg.ximg_.l_12_h.smart_-1024x530.jpg",
+        "code" : "n-mar",
+        "stock": 25,
+        "description" : "description here"
     },
     {
         "id": 3,
+        "timestamp" : 1668881195430,
         "title": "Ford Raptor",
         "price": "12.358.000",
-        "thumbnail": "image-Ford-Raptor"
+        "thumbnail": "https://www.ford.com.ar/content/ford/ar/es_ar/home/crossovers-suvs-4x4/nueva-f-150-raptor/jcr:content/par/image_167086159/image.imgs.full.high.jpg/1658331653908.jpg",
+        "code" : "f-rap",
+        "stock": 7,
+        "description" : "description here"
+    },
+    {
+        "id": 4,
+        "timestamp" : 1668881354246,
+        "title": "Peugot 308",
+        "price": "10.421.000",
+        "thumbnail": "https://cdn.motor1.com/images/mgl/Ok2pM/s1/peugeot-308.jpg",
+        "code" : "p-308",
+        "stock": 9,
+        "description" : "description here"
+    },
+    {
+        "id": 6,
+        "timestamp" : 1668883942034,
+        "title": "Ford Mustang",
+        "price": "100.889.000",
+        "thumbnail": "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/nameplate/mustang/mustang-2021/colorizer/gris-magnetico/far-mustang-fighter.jpg.dam.full.high.jpg/1622062692337.jpg",
+        "code" : "f-mus",
+        "stock": 1,
+        "description" : "description here"
     }
 ]

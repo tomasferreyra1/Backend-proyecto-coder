@@ -1,9 +1,9 @@
 Add product
 {
     "title": "Chevrolet Corvette",
-    "price": usd$ 120000,
-    "description": "Descripcion",
-    "code": "ch-cv-GSC-6.2-v8",
+    "price": 200.120.000,
+    "description": "Descripcion here",
+    "code": "ch-corv",
     "image": "https://images0.autocasion.com/unsafe/820x461/product/04/1947/d0dce9558ff590b317f3ddbc97e4ab75c98c9067.jpeg",
-    "stock": 5
+    "stock": 2
 }
