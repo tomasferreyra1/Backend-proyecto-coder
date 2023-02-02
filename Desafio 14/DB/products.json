@@ -1,0 +1,32 @@
+[
+  {
+    "title": "nissan skyline",
+    "price": "580.000",
+    "thumbnail": "https://fotos.perfil.com/2022/08/30/trim/1280/720/nissan-skyline-gt-r-1410481.jpg",
+    "id": 1
+  },
+  {
+    "title": "toyota supra",
+    "price": "630.000",
+    "thumbnail": "https://i.pinimg.com/736x/64/40/49/6440497e9c8b96d20dafd1a564fbee4d.jpg",
+    "id": 2
+  },
+  {
+    "title": "subaru impreza",
+    "price": "280.000",
+    "thumbnail": "https://cdn.motor1.com/images/mgl/2Xq6p/s3/low-mileage-1998-subaru-impreza-22b-sti.jpg",
+    "id": 3
+  },
+  {
+    "title": "honda civic type r",
+    "price": "145.000",
+    "thumbnail": "https://salaguamotors.com/wp-content/uploads/2021/04/1998-Honda-Civic-Type-R-Signal-Auto.jpg",
+    "id": 4
+  },
+  {
+    "title": "toyota altezza",
+    "price": "569.000",
+    "thumbnail": "https://salaguamotors.com/wp-content/uploads/2021/04/2000-Toyota-Altezza-HKS-Japan-750x390.jpg",
+    "id": 5
+  }
+]

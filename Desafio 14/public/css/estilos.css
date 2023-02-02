@@ -1,0 +1,12 @@
+h1 {
+    color: #72A0C1;
+}
+
+label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.jumbutton {
+    min-height: 100vh;
+}
