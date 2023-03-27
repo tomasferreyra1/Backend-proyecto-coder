@@ -1,0 +1,212 @@
+header {
+    background-color: #536872;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.formLista {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.formulario {
+    background-color: #536878;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.listaProductos {
+    background-color: #536878;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lista {
+    height: auto;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.mensajesContainer {
+    background-color: #536878;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.mensajesContainer h1 {
+    margin: 0px;
+}
+
+.mensajes {
+    display: flex;
+    background-color: #536878;
+    border-radius: 10px;
+    padding: 10px 20px;
+    align-items: flex-start;
+}
+
+.mensajes form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.mensaje {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.email {
+    color: #3775a1;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.avatar {
+    width: 25px;
+}
+
+.fecha {
+    color: #c0dfee;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.mensaje h4 {
+    color: #6498ba;
+    font-style: italic;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.listaMensajes {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0px 10px;
+}
+
+.formLogin {
+    background-color: #536878;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: fit-content;
+    color: white;
+}
+
+.formLogin p {
+    font-weight: bold;
+}
+
+.logout {
+    background-color: #536878;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: fit-content;
+    color: white;
+}
+
+.logout p {
+    font-weight: bold;
+}
+
+header img {
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+header h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .avatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+header small {
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+h2,
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px !important;
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API con chat</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/AxiosCliente.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div>
+                <h2>Bienvenido <%=user.nombre%>
+                </h2>
+                <h2>Email: <%=user.username%>
+                </h2>
+                <h2>Telefono: <%=user.telefono%>
+                </h2>
+                <h2>Direccion: <%=user.direccion%>
+                </h2>
+            </div>
+            <div class="avatarContainer">
+                <button onclick="location.href='/logout'">Desloguearse</button>
+            </div>
+        </header>
+        <section class="formLista">
+            <div class="formulario">
+                <h2>Agregar producto al carrito</h2>
+                <form action="/productos" method="post">
+                    <label for="title">Nombre producto</label>
+                    <input type="text" name="title" id="title">
+                    <label for="price">Precio producto</label>
+                    <input type="number" name="price" id="price">
+                    <label for="thumbnail"> URL imagen </label>
+                    <input type="text" name="thumbnail" id="thumbnail">
+                    <input type="submit" value="Guardar producto">
+                </form>
+            </div>
+            <div class="listaProductos">
+                <h1>Lista productos carrito</h1>
+                <div class="lista">
+                    <table id="listaProductos">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </table>
+                </div>
+                <form action="/pay" method="post" onsubmit="() => console.log(`Nueva compra`)">
+                    <input type="submit" value="Pagar">
+                </form>
+            </div>
+        </section>
+
+        <div class="mensajesContainer">
+            <h1>Centro de mensajes</h1>
+            <h2 id="porcentaje"></h2>
+            <div class="mensajes">
+                <form action="/mensajes" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="nadir@hotmail.com" name="email" id="email" required>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" placeholder="Apellido" name="apellido" id="apellido" required>
+                    <label for="edad">Edad</label>
+                    <input type="number" placeholder="Edad" name="edad" id="edad" required>
+                    <label for="alias">Alias</label>
+                    <input type="text" placeholder="Alias" name="alias" id="alias" required>
+                    <label for="avatar">Foto de perfil</label>
+                    <input type="text" placeholder="Avatar" name="avatar" id="avatar" required>
+                    <input type="text" placeholder="Escribe tu mensaje" name="text" id="text" required>
+                    <input type="submit" value="Enviar">
+                </form>
+                <div id="mensajes" class="listaMensajes">
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
